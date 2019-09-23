@@ -10,7 +10,6 @@
         <div class="description">두두는 비즈니스를 통해 세상을 변화시키는 소셜 이노베이터들이 함께 일하며 영감을 얻고, 새로운 기준을 세워 나가는 코워킹 커뮤니티 "카우앤독", 아웃소싱/프리랜서 플랫폼 "시소(Seeso)"와 함께합니다. </div>
         <div class="image-sponsor">
           <div class="image-sponsor cowndog"></div>
-          <div class="image-sponsor seeso"></div>
         </div>
         <div class="title">DODO Organizers</div>
         <div>
@@ -18,6 +17,9 @@
           <div class="organizer">Wandu</div>
           <div class="organizer">Moka</div>
           <div class="organizer">June</div>
+          <div class="organizer">Jongwony</div>
+          <div class="organizer">Lay</div>
+          <div class="organizer">Hyo</div>
         </div>
       </div>
     </div>
