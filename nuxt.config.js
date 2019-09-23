@@ -1,7 +1,10 @@
 
+const axios = require('axios')
+
 const AXIOS_BASEURL = process.env.AXIOS_BASEURL || "https://graph.alwaysdodo.com"
 
 module.exports = {
+  mode: "universal",
   head: {
     title: "We Are DODO",
     meta: [
@@ -28,6 +31,7 @@ module.exports = {
   loading: { color: "#3B8070" },
   modules: [
     '@nuxtjs/apollo',
+    '@nuxtjs/feed',
   ],
   apollo: {
     tokenName: 'alwaysdodo-landing',
@@ -48,6 +52,53 @@ module.exports = {
       },
     }
   },
+  feed: [
+    // A default feed configuration object
+    {
+      path: '/feed.xml', // The route to your feed.
+      async create(feed) {
+        feed.options = {
+          title: 'Always DODO',
+          link: 'https://alwaysdodo.com/',
+          description: 'alwaysdodo',
+        }
+
+        const response = await axios({
+          url: `${AXIOS_BASEURL}/graphql`,
+          method: 'post',
+          data: {
+            query: `
+                query {
+                  registries {
+                    id
+                    name
+                    value
+                  }
+                }
+              `
+          }
+        })
+        const meets = response.data.data.registries
+          .filter((registry) => registry.name === "meets[]")
+          .sort((a, b) => {
+            if (a.id == b.id) {
+              return 0
+            }
+            return a.id < b.id ? 1 : -1
+          })
+          .map(registry => registry.value)
+        meets.forEach(meet => {
+          feed.addItem({
+            title: JSON.parse(meet).title,
+            description: `<img src="${JSON.parse(meet).image}">`,
+          })
+        })
+      }, // The create function (see below)
+      cacheTime: 1000 * 60 * 15, // How long should the feed be cached
+      type: 'rss2', // Can be: rss2, atom1, json1
+      data: ['Some additional data'] // Will be passed as 2nd argument to `create` function
+    }
+  ],
   build: {
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
