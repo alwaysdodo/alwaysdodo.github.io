@@ -58,9 +58,9 @@ module.exports = {
       path: '/feed.xml', // The route to your feed.
       async create(feed) {
         feed.options = {
-          title: 'AlwaysDODO',
-          link: 'https://alwaysdodo.com/feed.xml',
-          description: 'alwaysdodo'
+          title: 'Always DODO',
+          link: 'https://alwaysdodo.com/',
+          description: 'alwaysdodo',
         }
 
         const response = await axios({
@@ -90,6 +90,7 @@ module.exports = {
         meets.forEach(meet => {
           feed.addItem({
             title: JSON.parse(meet).title,
+            description: `<img src="${JSON.parse(meet).image}">`,
           })
         })
       }, // The create function (see below)
