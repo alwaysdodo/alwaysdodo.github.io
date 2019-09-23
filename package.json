@@ -16,16 +16,19 @@
     "moment": "^2.22.2",
     "moment-timezone": "^0.5.17",
     "normalize.css": "^8.0.0",
-    "nuxt": "^2.9.1",
-    "serverless-nuxt": "0.0.10"
+    "nuxt-start": "^2.9.2",
+    "serverless-nuxt": "^0.2.0"
   },
   "devDependencies": {
+    "@babel/runtime-corejs2": "^7.6.0",
     "babel-eslint": "^8.2.1",
+    "core-js": "^2.6.9",
     "eslint": "^4.15.0",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^2.2.1",
     "eslint-plugin-vue": "^4.0.0",
     "node-sass": "^4.9.0",
+    "nuxt": "^2.9.2",
     "push-dir": "^0.4.1",
     "sass-loader": "^7.0.3",
     "serverless-domain-manager": "^3.2.6"

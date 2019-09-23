@@ -4,6 +4,7 @@ const axios = require('axios')
 const AXIOS_BASEURL = process.env.AXIOS_BASEURL || "https://graph.alwaysdodo.com"
 
 module.exports = {
+  mode: "universal",
   head: {
     title: "We Are DODO",
     meta: [
