@@ -31,7 +31,6 @@ custom:
   nuxt:
     version: v0.0.1
     bucketName: alwaysdodo-www-${self:provider.stage}
-    assetsPath: .nuxt/dist
   customDomain:
     stage: prod
     domainName: alwaysdodo.com
