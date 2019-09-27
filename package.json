@@ -17,7 +17,7 @@
     "moment-timezone": "^0.5.17",
     "normalize.css": "^8.0.0",
     "nuxt-start": "^2.9.2",
-    "serverless-nuxt": "^0.2.0"
+    "serverless-nuxt": "^0.2.1"
   },
   "devDependencies": {
     "@babel/runtime-corejs2": "^7.6.0",
