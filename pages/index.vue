@@ -20,6 +20,7 @@
           <div class="organizer">Jongwony</div>
           <div class="organizer">Lay</div>
           <div class="organizer">Hyo</div>
+          <div class="organizer">Jeongbin</div>
         </div>
       </div>
     </div>
