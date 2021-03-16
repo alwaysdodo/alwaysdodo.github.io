@@ -16,11 +16,12 @@
           <div class="organizer">Jinne</div>
           <div class="organizer">Wandu</div>
           <div class="organizer">Moka</div>
-          <div class="organizer">June</div>
           <div class="organizer">Jongwony</div>
           <div class="organizer">Lay</div>
           <div class="organizer">Hyo</div>
           <div class="organizer">Jeongbin</div>
+          <div class="organizer">Gamgyul</div>
+          <div class="organizer">June</div>
         </div>
       </div>
     </div>
