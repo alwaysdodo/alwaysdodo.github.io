@@ -59,13 +59,13 @@
   </div>
 </template>
 <script>
-import * as moment from "moment"
-import "moment-timezone"
-import { mapActions, mapState } from "vuex"
+import moment from 'moment-timezone'
+import { registerUrl, dday } from '~/events'
 
 export default {
   data() {
     return {
+      isLoaded: false,
       isDisplayFloating: false,
     }
   },
@@ -73,36 +73,25 @@ export default {
     window.addEventListener("scroll", this.calculateFloating)
     window.addEventListener("resize", this.calculateFloating)
     this.calculateFloating()
-    if (!this.$store.state.registries.isLoaded) {
-      await this.refresh()
-    }
+    this.isLoaded = true
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.calculateFloating)
     window.removeEventListener("resize", this.calculateFloating)
   },
   computed: {
-    ...mapState({
-      registries: state => state.registries.nodes,
-      isLoaded: state => state.registries.isLoaded,
-    }),
     registerUrl() {
-      const registerUrlReg = this.registries.find((registry) => registry.name === "register_url")
-      return registerUrlReg ? registerUrlReg.value : undefined
+      return registerUrl
     },
     remainDays() {
-      const ddayReg = this.registries.find((registry) => registry.name === "dday")
-      if (!ddayReg || !ddayReg.value) {
+      if (!dday) {
         return null
       }
-      const dday = moment.tz(`${ddayReg.value} 19:30:00`, "Asia/Seoul").diff(new Date(), "day")
-      return dday < 0 ? null : dday
+      const ddayDate = moment.tz(dday, 'Asia/Seoul').diff(new Date(), 'day')
+      return ddayDate < 0 ? null : ddayDate
     },
   },
   methods: {
-    ...mapActions({
-      refresh: 'registries/refresh'
-    }),
     calculateFloating() {
       if (this.$refs.floatTrigger) {
         this.isDisplayFloating = this.$refs.floatTrigger.getBoundingClientRect().bottom < 0

@@ -1,22 +1,11 @@
-# alwaysdodo.com
-
-> Nuxt.js project
+# 두두두두 랜딩페이지
 
 ## Build Setup
 
 ``` bash
-# install dependencies
-$ npm install # Or yarn install
-
-# serve with hot reload at localhost:3000
+# 개발할때는 이케이케
+$ npm install
 $ npm run dev
 
-# build for production and launch server
-$ npm run build
-$ npm start
-
-# generate static project
-$ npm run generate
+# 배포는 대충 작업해서 푸시하면 끗.
 ```
-
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).

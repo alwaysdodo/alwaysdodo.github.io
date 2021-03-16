@@ -37,28 +37,8 @@ module.exports = {
   ],
   loading: { color: "#3B8070" },
   modules: [
-    '@nuxtjs/apollo',
     '@nuxtjs/feed',
   ],
-  apollo: {
-    tokenName: 'alwaysdodo-landing',
-    includeNodeModules: true,
-    defaultOptions: {
-      $query: {
-        loadingKey: 'loading',
-        fetchPolicy: 'cache-and-network',
-      },
-    },
-    // required
-    clientConfigs: {
-      default: {
-        httpEndpoint: `${AXIOS_BASEURL}/graphql`,
-        httpLinkOptions: {
-          credentials: 'same-origin'
-        },
-      },
-    }
-  },
   feed: [
     // A default feed configuration object
     {
