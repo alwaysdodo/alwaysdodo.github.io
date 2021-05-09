@@ -1,6 +1,6 @@
 
 module.exports = {
-  registerUrl: 'https://forms.gle/ymYXCqu58Hu5yvLP7',
+  registerUrl: 'https://forms.gle/NarTyJAMWKyfY71aA',
   dday: '2021-05-23 21:00:00',
   meets: [
     { title: 'Long-term DODO', image: '/posters/dodo_longterm.jpg' },
