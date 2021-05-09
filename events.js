@@ -1,8 +1,9 @@
 
 module.exports = {
   registerUrl: 'https://forms.gle/ymYXCqu58Hu5yvLP7',
-  dday: '2020-11-28 19:30:30',
+  dday: '2021-05-23 21:00:00',
   meets: [
+    { title: 'Long-term DODO', image: '/posters/dodo_longterm.jpg' },
     { title: 'DODO19', image: '/posters/dodo19.gif' },
     { title: 'DODO18', image: '/posters/dodo18.png' },
     { title: 'DODO17', image: '/posters/dodo17.gif' },
