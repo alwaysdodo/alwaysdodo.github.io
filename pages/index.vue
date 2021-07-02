@@ -21,7 +21,6 @@
           <div class="organizer">Hyo</div>
           <div class="organizer">Jeongbin</div>
           <div class="organizer">Gamgyul</div>
-          <div class="organizer">June</div>
         </div>
       </div>
     </div>
