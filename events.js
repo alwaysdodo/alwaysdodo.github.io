@@ -4,6 +4,7 @@ module.exports = {
   dday: '2021-07-11 21:00:00',
   meets: [
     { title: 'Long-term DODO 4', image: '/posters/dodo_longterm_4.jpg' },
+    { title: 'Long-term DODO 3', image: '/posters/dodo_longterm_3.gif' },
     { title: 'Long-term DODO 2', image: '/posters/dodo_longterm_2.png' },
     { title: 'Long-term DODO', image: '/posters/dodo_longterm.jpg' },
     { title: 'DODO19', image: '/posters/dodo19.gif' },
